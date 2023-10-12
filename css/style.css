@@ -10,7 +10,8 @@ body {
 
 :root {
     --footer-height: 5rem;
-    --navBar-widht: 11rem
+    --navBar-widht: 11rem;
+    --navBar-bottom-container-hegith: 8rem
 }
 
 .page-wrapper {
@@ -25,14 +26,26 @@ main {
     display: flex;
 }
 
-/* Nav bar settings*/
+/* Nav bar settings */
+
+.nav-bar-mobile{
+    display: none;
+}
 
 .nav-bar {
     max-height: 100%;
     width: var(--navBar-widht);
     background-color: black;
-    
 
+
+}
+
+.container-nav-up {
+    min-height: calc(100% - var(--navBar-bottom-container-hegith));
+}
+
+.container-nav-bottom {
+    height: var(--navBar-bottom-container-hegith);
 }
 
 .spotify-logo {
@@ -42,6 +55,7 @@ main {
 }
 
 /* settings for all */
+
 .btn {
     padding: 0.3rem 0 0.3rem 1rem;
 }
@@ -69,7 +83,7 @@ main {
     color: gray;
 }
 
-/* -------------------------------------- */
+
 .btn.home {
     border-left: 2px solid greenyellow;
 }
@@ -114,10 +128,10 @@ main {
 }
 
 .btn.install {
-    padding-top: 17rem;
+    padding-top: 3rem;
     padding-left: 0;
-    margin-right: 1rem;
     border-bottom: 1px solid gray;
+    margin-right: 1rem;
     margin-left: 1rem;
 }
 
@@ -142,7 +156,7 @@ main {
     font-weight: 550;
 }
 
-/* ------------------------------------- */
+ /* ------------------------------------- */
 
 
 /* Content section settings */
@@ -169,7 +183,7 @@ main {
     font-size: 10px;
 }
 
-.page-heading{
+.page-heading {
     max-width: 50rem;
     margin: 0 auto;
     line-height: 3rem;
@@ -177,61 +191,61 @@ main {
 
 }
 
-.page-heading a{
+.page-heading a {
     text-decoration: none;
     color: #8f9196;
     padding: 0.5rem;
     font-size: 12px;
 }
 
-.page-heading a:first-child{
+.page-heading a:first-child {
     border-bottom: 1px solid yellowgreen;
-    width: 5px  ;
+    width: 5px;
 }
 
 
-.centered-container{
+.centered-container {
     width: calc(97vw - var(--navBar-widht));
     margin: 0 auto;
 }
 
 
-.sec-flex{
-    padding:1rem 1rem 0 0;
+.sec-flex {
+    padding: 1rem 1rem 0 0;
     display: flex;
     gap: 3vw
-    
 }
 
-.content-section h2{
+.content-section h2 {
     font-size: 20px;
     padding: 0.5rem 0 0 1rem;
 }
 
-.content-section p{
+.content-section p {
     font-size: 8px;
-    color: #8f9196;;
-    
+    color: #8f9196;
+    ;
+
 }
 
-.song-card{
+.song-card {
     /* width: calc(100% - 10rem); */
     width: 14%;
     text-align: center;
-    
+
 }
 
-.song-card img{
+.song-card img {
     width: 100%;
 }
 
-.song-card h3{
+.song-card h3 {
     font-size: 12px;
     padding: 0.5rem 0;
-    
+
 }
 
-.desc{
+.desc {
     padding: 0.5rem 1rem;
 }
 
@@ -239,7 +253,7 @@ main {
 
 
 
-.round-img{
+.round-img {
     border-radius: 50%;
 }
 
@@ -253,7 +267,7 @@ main {
 /* ******************************* */
 footer {
     height: var(--footer-height);
-    background-color: #2c2c2c;
+    background-color: #282828;
     display: flex;
     justify-content: space-between;
 }
@@ -272,7 +286,8 @@ footer {
 
 .left.column {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    background-color: #282828;
 }
 
 
@@ -376,3 +391,97 @@ footer {
     width: 65%;
 
 }
+
+/* *************************** 
+    MEDIA QUERIES SECTION
+ *************************** */
+
+/* Nav bar settings*/
+
+@media screen and (max-width: 578px) {
+    
+
+
+:root {
+    --footer-height: 5rem;
+    --navBar-widht: 2.5rem;
+    --navBar-bottom-container-hegith: 8rem
+}
+
+/* Nav bar settings */
+.nav-bar{
+    display: none;
+}
+
+.nav-bar-mobile {
+    max-height: 100%;
+    width: var(--navBar-widht);
+    background-color: black;
+    display: inline-block;
+
+}
+
+.container-nav-up {
+    min-height: calc(100% - var(--navBar-bottom-container-hegith));
+}
+
+.container-nav-bottom {
+    height: var(--navBar-bottom-container-hegith);
+}
+
+
+.btn {
+    padding: 0.4rem;
+}
+
+
+.logo {
+    width: 1.5rem;
+    filter: invert(0.4);
+
+}
+
+
+.home.logo, .spotify.logo {
+    filter: invert(0);
+}
+
+.btn.home {
+    border-left: none;
+}
+
+
+.profile.logo {
+    width: 1.2rem;
+    background-color: #7c7c7c;
+    border-radius: 50px;
+    margin-right: 0;
+    margin-left: 4px;
+    filter: invert(0);
+}
+
+.btn.install {
+    border: none;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.install.logo {
+    width: 1.2rem;
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.btn.profile {
+    padding-top: 1rem;
+}
+
+/* --------------------------------- */
+
+
+
+
+
+
+}
+
