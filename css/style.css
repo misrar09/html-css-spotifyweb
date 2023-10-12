@@ -1,145 +1,160 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: sans-serif;
 }
 
-:root{
+:root {
     --footer-height: 5rem;
     --navBar-widht: 11rem
 }
 
-.page-wrapper{
+.page-wrapper {
     height: 100vh;
     color: white;
 }
-/* MAIN SECTION */
-main{
+
+        /* MAIN SECTION */
+/* **************************** */
+main {
     height: calc(100% - var(--footer-height));
     display: flex;
 }
 
-.nav-bar{
+/* Nav bar settings*/
+
+.nav-bar {
+    max-height: 100%;
+    overflow-y: auto;
     width: var(--navBar-widht);
     background-color: black;
 
 }
 
-.big-logo{
+.spotify-logo {
     width: 7rem;
-    padding: 2rem 0 2rem 1rem;
+    padding: 1.5rem 0 0.5rem 1rem;;
 }
 
-.btn{
-    padding: 0.3rem 0 0.3rem 1rem;
+/* settings for all */
+.btn {                      
+    padding: 0.3rem 0 0.3rem 1rem;  
 }
 
-.btn.home{
-    border-left: 2px solid greenyellow;
-}
 
-.logo{
+.logo {
     width: 1.5rem;
     filter: invert(0.4);
     vertical-align: middle;
-    
+
 }
 
-.link{
+.link {
     text-decoration: none;
     color: white;
 }
 
-.text{
+.text {
     vertical-align: middle;
     font-size: 13px;
 
 }
 
-.nav-bar span:not(.home, .profile){
+.nav-bar span:not(.home, .profile) {
     color: gray;
 }
 
-.text-playlist{
+/* -------------------------------------- */
+.btn.home {
+    border-left: 2px solid greenyellow;
+}
+
+.text-playlist {
     padding: 1.5rem 0 0.3rem 1rem;
     font-size: 13px;
     font-weight: 550;
 }
 
-.add-btn{
+.add-btn {
     background-color: gray;
     font-size: 15px;
     width: 30px;
     height: 30px;
     padding: 0.5rem;
-    
+
 }
 
-.crea.text{
+.crea.text {
     padding-left: 0.5rem;
 }
 
-.btn.crea-playlist{
+
+.playlist-scrol{
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+
+.btn.crea-playlist {
     padding-bottom: 0.5rem;
 }
 
 
-.name-playlist{
+.name-playlist {
     padding-bottom: 0.5rem;
 }
 
-.btn.install{
+.btn.install {
     padding-top: 17rem;
     padding-left: 0;
     margin-right: 1rem;
     border-bottom: 1px solid gray;
     margin-left: 1rem;
- }
+}
 
-.install.logo{
+.install.logo {
     width: 1.2rem;
     margin-right: 0.2rem;
 }
 
-.btn.profile{
+.btn.profile {
     padding-top: 1rem;
 }
 
-.profile.logo{
+.profile.logo {
     width: 1.2rem;
-    background-color: rgba(75, 74, 74, 0.5);
+    background-color: #7c7c7c;
     border-radius: 50px;
     margin-right: 0.3rem;
+    filter: invert(0);
 }
 
-.profile.text{
+.profile.text {
     font-weight: 550;
 }
+/* ------------------------------------- */
 
 
-
-
-
-
-.content-section{
+/* Content section settings */
+.content-section {
     width: calc(100% - var(--navBar-widht));
     background-color: #1b1f26;
-    overflow: scroll;
+    overflow-y: auto;
 
 }
 
-.top-bar{
-    height:5rem ;
+.top-bar {
+    height: 5rem;
     background-color: #111319;
     text-align: right;
     padding: 2rem 0.5rem;
 }
 
-.top-bar a{
+.top-bar a {
     text-decoration: none;
     color: white;
     border: 1px solid white;
@@ -157,8 +172,71 @@ main{
 
 
 /* -------------------------------- */
-/* FOOTER SECTION */
-footer{
+        /* FOOTER SECTION */
+/* ******************************* */
+footer {
     height: var(--footer-height);
     background-color: #2c2c2c;
+    display: flex;
+    justify-content: space-between;
 }
+
+.column{
+    display: flex;
+    padding: 1rem 0.5rem;
+    ;
+    align-items: center;
+}
+
+.left.column, .right.column{
+    width: 25%;
+    color: gray;
+}
+
+.left.column{
+    justify-content: space-between
+}
+
+
+.sinister-image{
+    width: 50px;
+    
+    
+}
+
+.song{
+    margin-right: 1.8rem;
+    font-size: 14px;
+}
+
+.song .title{
+    font-weight: 550;
+    color: white;
+}
+
+.right.column{
+    gap: 18px;
+    justify-content: flex-end;
+   
+}
+
+
+.dark{
+    
+    width: 30px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.light{
+    width: 80px;
+    border: 2px solid;
+    border-radius: 2px;
+    margin-left: -20px;
+}
+
+
+
+
+
+
