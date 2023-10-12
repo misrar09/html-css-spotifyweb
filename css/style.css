@@ -18,7 +18,7 @@ body {
     color: white;
 }
 
-        /* MAIN SECTION */
+/* MAIN SECTION */
 /* **************************** */
 main {
     height: calc(100% - var(--footer-height));
@@ -29,20 +29,21 @@ main {
 
 .nav-bar {
     max-height: 100%;
-    overflow-y: auto;
     width: var(--navBar-widht);
     background-color: black;
+    
 
 }
 
 .spotify-logo {
     width: 7rem;
-    padding: 1.5rem 0 0.5rem 1rem;;
+    padding: 1.5rem 0 0.5rem 1rem;
+    ;
 }
 
 /* settings for all */
-.btn {                      
-    padding: 0.3rem 0 0.3rem 1rem;  
+.btn {
+    padding: 0.3rem 0 0.3rem 1rem;
 }
 
 
@@ -73,6 +74,10 @@ main {
     border-left: 2px solid greenyellow;
 }
 
+.home.logo {
+    filter: invert(0);
+}
+
 .text-playlist {
     padding: 1.5rem 0 0.3rem 1rem;
     font-size: 13px;
@@ -93,7 +98,7 @@ main {
 }
 
 
-.playlist-scrol{
+.playlist-scrol {
     max-height: 180px;
     overflow-y: auto;
 }
@@ -136,6 +141,7 @@ main {
 .profile.text {
     font-weight: 550;
 }
+
 /* ------------------------------------- */
 
 
@@ -148,10 +154,10 @@ main {
 }
 
 .top-bar {
-    height: 5rem;
+    height: 4rem;
     background-color: #111319;
     text-align: right;
-    padding: 2rem 0.5rem;
+    padding: 1.3rem 0.5rem;
 }
 
 .top-bar a {
@@ -163,8 +169,79 @@ main {
     font-size: 10px;
 }
 
+.page-heading{
+    max-width: 50rem;
+    margin: 0 auto;
+    line-height: 3rem;
+    text-align: center;
+
+}
+
+.page-heading a{
+    text-decoration: none;
+    color: #8f9196;
+    padding: 0.5rem;
+    font-size: 12px;
+}
+
+.page-heading a:first-child{
+    border-bottom: 1px solid yellowgreen;
+    width: 5px  ;
+}
 
 
+.centered-container{
+    width: calc(97vw - var(--navBar-widht));
+    margin: 0 auto;
+}
+
+
+.sec-flex{
+    padding:1rem 1rem 0 0;
+    display: flex;
+    gap: 3vw
+    
+}
+
+.content-section h2{
+    font-size: 20px;
+    padding: 0.5rem 0 0 1rem;
+}
+
+.content-section p{
+    font-size: 8px;
+    color: #8f9196;;
+    
+}
+
+.song-card{
+    /* width: calc(100% - 10rem); */
+    width: 14%;
+    text-align: center;
+    
+}
+
+.song-card img{
+    width: 100%;
+}
+
+.song-card h3{
+    font-size: 12px;
+    padding: 0.5rem 0;
+    
+}
+
+.desc{
+    padding: 0.5rem 1rem;
+}
+
+
+
+
+
+.round-img{
+    border-radius: 50%;
+}
 
 
 
@@ -172,7 +249,7 @@ main {
 
 
 /* -------------------------------- */
-        /* FOOTER SECTION */
+/* FOOTER SECTION */
 /* ******************************* */
 footer {
     height: var(--footer-height);
@@ -181,62 +258,121 @@ footer {
     justify-content: space-between;
 }
 
-.column{
-    display: flex;
+.column {
+
     padding: 1rem 0.5rem;
-    ;
     align-items: center;
 }
 
-.left.column, .right.column{
-    width: 25%;
+.left.column,
+.right.column {
+    width: 230px;
     color: gray;
 }
 
-.left.column{
+.left.column {
+    display: flex;
     justify-content: space-between
 }
 
 
-.sinister-image{
+.sinister-image {
     width: 50px;
-    
-    
+
+
 }
 
-.song{
+.song {
     margin-right: 1.8rem;
     font-size: 14px;
 }
 
-.song .title{
+.song .title {
     font-weight: 550;
     color: white;
 }
 
-.right.column{
-    gap: 18px;
-    justify-content: flex-end;
-   
+.right.column {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 
-.dark{
-    
+.volume-bar,
+.play-bar {
+    display: flex;
+}
+
+.dark {
+    background-color: #c1c1c1;
+    border-radius: 2px;
+    height: 3px;
+
+}
+
+.light {
+    border-radius: 2px;
+    height: 3px;
+    background-color: gray;
+    margin-left: -2px;
+}
+
+.volume-bar .dark {
+
     width: 30px;
-    border: 2px solid white;
-    border-radius: 2px;
+
 }
 
-.light{
+.volume-bar .light {
     width: 80px;
-    border: 2px solid;
-    border-radius: 2px;
-    margin-left: -20px;
+
+
 }
 
 
 
+.center.column {
+    width: 40%;
+
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    padding-bottom: 10px;
+}
+
+.btn-row .fa-circle-play {
+    font-size: 25px;
+}
+
+.time-row {
+    display: flex;
+    justify-content: center
+}
+
+.time-row p {
+    font-size: 12px;
+    color: #c1c1c1;
+}
 
 
+.play-bar {
+    width: 100%;
+    padding: 0 0;
+    align-items: center;
+    justify-content: center;
+}
 
+.play-bar .dark {
+    width: 25%;
+
+}
+
+.play-bar .light {
+    width: 65%;
+
+}
